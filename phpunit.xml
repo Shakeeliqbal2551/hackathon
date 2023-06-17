@@ -1,0 +1,29 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
+
+     <php>
+        <!-- Set your environment variables here -->
+        <env name="APP_ENV" value="testing" />
+        <!-- Set your database connection settings for PostgreSQL -->
+        <env name="DB_CONNECTION" value="mysql" />
+        <env name="DB_HOST" value="127.0.0.1" />
+        <env name="DB_PORT" value="3306" />
+        <env name="DB_DATABASE" value="dhackathon" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="" />
+        <env name="base_url" value="http://127.0.0.1:8000/" />
+    </php>
+</phpunit>
