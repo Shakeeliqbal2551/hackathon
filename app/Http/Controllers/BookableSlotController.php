@@ -19,10 +19,4 @@ class BookableSlotController extends Controller
     {
         return $this->bookableSlotRepository->getAvailableSlots();
     }
-
-
-    
-
-
-
 }

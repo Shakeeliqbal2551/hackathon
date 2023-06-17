@@ -100,5 +100,4 @@ class BookingRepository implements BookingInterface
         }
         $bookableSlot->save();
     }
-
 }
