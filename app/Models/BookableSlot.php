@@ -4,17 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BookableSlot extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
-    // protected $dates = [
-    //     'start_time',
-    //     'end_time',
-    //     'created_at',
-    //     'updated_at'
-    // ];
 
     public function service()
     {

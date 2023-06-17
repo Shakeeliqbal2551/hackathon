@@ -20,6 +20,7 @@ class CreateBookableSlotsTable extends Migration
             $table->dateTime('end_time');
             $table->integer('total_entries')->default(0);
             $table->boolean('is_booked')->default(false);
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');

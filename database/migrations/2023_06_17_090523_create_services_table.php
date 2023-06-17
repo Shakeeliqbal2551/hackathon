@@ -20,6 +20,7 @@ class CreateServicesTable extends Migration
             $table->integer('max_clients');
             $table->integer('break_duration');
             $table->integer('booking_days_limit');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

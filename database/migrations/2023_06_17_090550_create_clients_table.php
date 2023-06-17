@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->unsignedBigInteger('booking_id');
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('booking_id')->references('id')->on('bookings')->onDelete('cascade');

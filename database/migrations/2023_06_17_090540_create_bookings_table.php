@@ -16,6 +16,7 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('bookable_slot_id');
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('bookable_slot_id')->references('id')->on('bookable_slots')->onDelete('cascade');
