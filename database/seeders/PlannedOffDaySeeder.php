@@ -24,7 +24,6 @@ class PlannedOffDaySeeder extends Seeder
             'description' => 'Public Holiday',
             'date' => Carbon::now()->addDays(2)->format('Y-m-d'),
             'is_full_day' => true,
-            'is_all_services' => true,
         ]);
 
         PlannedOffDay::create([
@@ -32,7 +31,6 @@ class PlannedOffDaySeeder extends Seeder
             'description' => 'Public Holiday',
             'date' => Carbon::now()->addDays(2)->format('Y-m-d'),
             'is_full_day' => true,
-            'is_all_services' => true,
         ]);
     }
 }

@@ -21,7 +21,6 @@ class CreatePlannedOffDaysTable extends Migration
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();
             $table->boolean('is_full_day')->default(false);
-            $table->boolean('is_all_services')->default(false);
             $table->softDeletes();
             $table->timestamps();
 
