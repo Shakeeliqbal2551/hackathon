@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('calendar', [BookableSlotController::class, 'calendar']);
-Route::post('booking', [BookingController::class, 'store']);
+Route::get('calendar', [BookableSlotController::class, 'calendar'])->name('calender');
+Route::post('booking', [BookingController::class, 'store'])->name('store.booking');
