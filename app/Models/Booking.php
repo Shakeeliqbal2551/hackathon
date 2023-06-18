@@ -12,6 +12,15 @@ class Booking extends Model
 
     public function slot()
     {
-        return $this->hasOne(BookableSlot::class);
+        return $this->belongsTo(BookableSlot::class, 'bookable_slot_id');
+    }
+
+    public function clients()
+    {
+        return $this->hasMany(Client::class);
+    }
+    public function service()
+    {
+        return $this->belongsTo(service::class, 'service_id');
     }
 }
